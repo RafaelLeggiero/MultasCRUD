@@ -29,21 +29,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         try {
-            if (v.getId() == R.id.btnCadastrar) {
-                Intent myIntent = new Intent(getApplicationContext(), Cadastrar.class);
-                startActivity(myIntent);
-            } else if (v.getId() == R.id.btnListar) {
-                Intent myIntent = new Intent(getApplicationContext(), ListarMultas.class);
-                startActivity(myIntent);
-            } else if (v.getId() == R.id.btnAltera) {
-                Intent myIntent = new Intent(getApplicationContext(), Alterar.class);
-                startActivity(myIntent);
-            } else if (v.getId() == R.id.btnExcluir) {
-                Intent myIntent = new Intent(getApplicationContext(), Excluir.class);
-                startActivity(myIntent);
-            } else if (v.getId() == R.id.btnConsultar) {
-                Intent myIntent = new Intent(getApplicationContext(), ConsultaFiltro.class);
-                startActivity(myIntent);
+            switch (v.getId()){
+                case R.id.btnCadastrar:
+                    Intent myIntent = new Intent(getApplicationContext(), Cadastrar.class);
+                    startActivity(myIntent);
+                    break;
+                case R.id.btnListar:
+                    Intent myIntent2 = new Intent(getApplicationContext(), ListarMultas.class);
+                    startActivity(myIntent2);
+                    break;
+                case R.id.btnAltera:
+                    Intent myIntent3 = new Intent(getApplicationContext(), Alterar.class);
+                    startActivity(myIntent3);
+                    break;
+                case R.id.btnExcluir:
+                    Intent myIntent4 = new Intent(getApplicationContext(), Excluir.class);
+                    startActivity(myIntent4);
+                    break;
+                case R.id.btnConsultar:
+                    Intent myIntent5 = new Intent(getApplicationContext(), ConsultaFiltro.class);
+                    startActivity(myIntent5);
+                    break;
             }
         }catch (Exception ex){
             Toast.makeText(this,ex.getMessage(),Toast.LENGTH_LONG).show();
